@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Kopi</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daftar Kopi</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Kopi</th>
+                <th>Jenis</th>
+                <th>Asal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($kopis as $kopi)
+                <tr>
+                    <td>{{ $kopi->nama_kopi }}</td>
+                    <td>{{ $kopi->jenis }}</td>
+                    <td>{{ $kopi->asal }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</body>
+</html>
